@@ -1,0 +1,600 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{CE0E3C71-A733-4E51-89D1-F71D13D3FCF8}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Angular</RootNamespace>
+    <AssemblyName>Angular</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Antlr3.Runtime, Version=3.5.0.2, Culture=neutral, PublicKeyToken=eb42632606e9261f, processorArchitecture=MSIL">
+      <HintPath>..\packages\Antlr3.Runtime.3.5.1\lib\net40-client\Antlr3.Runtime.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.Agent.Intercept, Version=2.0.6.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.2.0.6\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.DependencyCollector, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.DependencyCollector.2.2.0\lib\net45\Microsoft.AI.DependencyCollector.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.PerfCounterCollector, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.PerfCounterCollector.2.2.0\lib\net45\Microsoft.AI.PerfCounterCollector.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.ServerTelemetryChannel, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.2.2.0\lib\net45\Microsoft.AI.ServerTelemetryChannel.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.Web, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Web.2.2.0\lib\net45\Microsoft.AI.Web.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.WindowsServer, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.2.2.0\lib\net45\Microsoft.AI.WindowsServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ApplicationInsights, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.2.2.0\lib\net45\Microsoft.ApplicationInsights.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Owin, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.3.0.1\lib\net45\Microsoft.Owin.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.3.0.1\lib\net45\Microsoft.Owin.Security.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Ninject, Version=3.2.0.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ninject.3.2.0.0\lib\net45-full\Ninject.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Ninject.Web.Common, Version=3.2.0.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ninject.Web.Common.3.2.0.0\lib\net45-full\Ninject.Web.Common.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Ninject.Web.Mvc, Version=3.2.0.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ninject.MVC5.3.2.1.0\lib\net45-full\Ninject.Web.Mvc.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Owin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=f0ebd12fd5e55cc5, processorArchitecture=MSIL">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Providers, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Providers.Core.2.0.0\lib\net40\System.Web.Providers.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="WebActivatorEx, Version=2.0.0.0, Culture=neutral, PublicKeyToken=7b26dc2a43f6a0d4, processorArchitecture=MSIL">
+      <HintPath>..\packages\WebActivatorEx.2.0\lib\net40\WebActivatorEx.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="WebMatrix.Data, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.Data.2.0.20710.0\lib\net40\WebMatrix.Data.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\NinjectWebCommon.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AngularController.cs" />
+    <Compile Include="Controllers\PhotoController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Infrastructure\CaptchaImage.cs" />
+    <Compile Include="Infrastructure\Extensions\UserExtensions.cs" />
+    <Compile Include="Infrastructure\Mappers\MvcPLMappers.cs" />
+    <Compile Include="Infrastructure\NinjectDependencyResolver.cs" />
+    <Compile Include="Models\LoginViewModel.cs" />
+    <Compile Include="Models\RegisterViewModel.cs" />
+    <Compile Include="Models\UserViewModel.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Providers\CustomMembershipProvider.cs" />
+    <Compile Include="Providers\CustomRoleProvider.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Images\accountImagePhoto.jpg" />
+    <Content Include="Content\Images\add-circle-blue-128.png" />
+    <Content Include="Content\Images\back.jpg" />
+    <Content Include="Content\Images\carousel_1.jpg" />
+    <Content Include="Content\Images\carousel_2.jpg" />
+    <Content Include="Content\Images\carousel_3.jpg" />
+    <Content Include="Content\Images\insta_icon.png" />
+    <Content Include="Content\Images\like.jpg" />
+    <Content Include="Content\Images\unnamed.png" />
+    <Content Include="Content\Images\UsersImages\MyVprofile2.jpgIMG_9467 %281%29.jpg" />
+    <Content Include="Content\Images\UsersImages\profile2.jpg109350_original.jpg" />
+    <Content Include="Content\Images\UsersImages\profile2.jpgVCLFm8ikYQ4.jpg" />
+    <Content Include="Content\Images\UsersImages\profile2.jpgНовый-год-в-странах.jpg" />
+    <Content Include="Content\Images\UsersImages\profile2_11188-730x487.jpg" />
+    <Content Include="Content\Images\UsersImages\profile2_1203417_malarstwo_dom_ogrod.jpg" />
+    <Content Include="Content\Images\UsersImages\profile2_123.jpg" />
+    <Content Include="Content\Images\UsersImages\profile2_15000x2108_443484_[www.ArtFile.ru].jpg" />
+    <Content Include="Content\Images\UsersImages\profile2_1Crocus-sieberi-Violet-Queen.jpg" />
+    <Content Include="Content\Images\UsersImages\profile2_1dy9KAqFGKjM.jpg" />
+    <Content Include="Content\Images\UsersImages\profile2_1E-32ljIAFe4.jpg" />
+    <Content Include="Content\Images\UsersImages\profile2_1em06DpheRkI.jpg" />
+    <Content Include="Content\Images\UsersImages\profile2_1profile2_22012_03_09_epam01.jpg" />
+    <Content Include="Content\Images\UsersImages\profile2_22012_03_09_epam01.jpg" />
+    <Content Include="Content\Images\UsersImages\profile2_2body_src_20161207_113903_.jpg" />
+    <Content Include="Content\Images\UsersImages\profile2_2epam_02102015_tutby_brush_phsl_img_01.jpg" />
+    <Content Include="Content\Images\UsersImages\profile2_2Vlike.jpg" />
+    <Content Include="Content\Images\UsersImages\Vlike.jpg" />
+    <Content Include="Content\Images\Vprofile2.jpg22a6a0c1fb0b761080307ce472d52377.jpg" />
+    <Content Include="ContextMenu\jQuery-contextMenu-master\dist\jquery.contextMenu.css" />
+    <Content Include="ContextMenu\jQuery-contextMenu-master\dist\jquery.contextMenu.js" />
+    <Content Include="ContextMenu\jQuery-contextMenu-master\dist\jquery.contextMenu.min.css" />
+    <Content Include="ContextMenu\jQuery-contextMenu-master\dist\jquery.contextMenu.min.js" />
+    <Content Include="ContextMenu\jQuery-contextMenu-master\dist\jquery.ui.position.js" />
+    <Content Include="ContextMenu\jQuery-contextMenu-master\dist\jquery.ui.position.min.js" />
+    <Content Include="ContextMenu\jQuery-contextMenu-master\documentation\website\css\screen.css" />
+    <Content Include="ContextMenu\jQuery-contextMenu-master\documentation\website\css\theme-fixes.css" />
+    <Content Include="ContextMenu\jQuery-contextMenu-master\documentation\website\css\theme.css" />
+    <Content Include="ContextMenu\jQuery-contextMenu-master\documentation\website\fonts\2C6A5F_0_0.svg" />
+    <Content Include="ContextMenu\jQuery-contextMenu-master\documentation\website\fonts\2C6A5F_1_0.svg" />
+    <Content Include="ContextMenu\jQuery-contextMenu-master\documentation\website\fonts\fontawesome-webfont.svg" />
+    <Content Include="ContextMenu\jQuery-contextMenu-master\documentation\website\fonts\ProximaNova-Reg-webfont.svg" />
+    <Content Include="ContextMenu\jQuery-contextMenu-master\documentation\website\fonts\ProximaNova-Sbold-webfont.svg" />
+    <Content Include="ContextMenu\jQuery-contextMenu-master\documentation\website\images\swis-logo.jpg" />
+    <Content Include="ContextMenu\jQuery-contextMenu-master\documentation\website\js\main.js" />
+    <Content Include="ContextMenu\jQuery-contextMenu-master\documentation\website\js\theme.js" />
+    <Content Include="ContextMenu\jQuery-contextMenu-master\documentation\website\original-theme\css\badge_only.css" />
+    <Content Include="ContextMenu\jQuery-contextMenu-master\documentation\website\screenshot.png" />
+    <Content Include="ContextMenu\jQuery-contextMenu-master\documentation\website\screenshots\jquery-contextMenu.png" />
+    <Content Include="ContextMenu\jQuery-contextMenu-master\documentation\website\screenshots\jquery-contextMenu.subs.png" />
+    <Content Include="ContextMenu\jQuery-contextMenu-master\documentation\website\screenshots\native.firefox-9.0a1.png" />
+    <Content Include="ContextMenu\jQuery-contextMenu-master\gulpfile.js" />
+    <Content Include="ContextMenu\jQuery-contextMenu-master\karma.conf.js" />
+    <Content Include="ContextMenu\jQuery-contextMenu-master\src\icons\add.svg" />
+    <Content Include="ContextMenu\jQuery-contextMenu-master\src\icons\copy.svg" />
+    <Content Include="ContextMenu\jQuery-contextMenu-master\src\icons\cut.svg" />
+    <Content Include="ContextMenu\jQuery-contextMenu-master\src\icons\delete.svg" />
+    <Content Include="ContextMenu\jQuery-contextMenu-master\src\icons\edit.svg" />
+    <Content Include="ContextMenu\jQuery-contextMenu-master\src\icons\loading.svg" />
+    <Content Include="ContextMenu\jQuery-contextMenu-master\src\icons\paste.svg" />
+    <Content Include="ContextMenu\jQuery-contextMenu-master\src\icons\quit.svg" />
+    <Content Include="ContextMenu\jQuery-contextMenu-master\src\jquery.contextMenu.js" />
+    <Content Include="ContextMenu\jQuery-contextMenu-master\src\jquery.ui.position.js" />
+    <Content Include="ContextMenu\jQuery-contextMenu-master\test\index.html" />
+    <Content Include="ContextMenu\jQuery-contextMenu-master\test\integration\custom-command.js" />
+    <Content Include="ContextMenu\jQuery-contextMenu-master\test\integration\disabled-callback.js" />
+    <Content Include="ContextMenu\jQuery-contextMenu-master\test\integration\disabled-changing.js" />
+    <Content Include="ContextMenu\jQuery-contextMenu-master\test\integration\disabled-menu.js" />
+    <Content Include="ContextMenu\jQuery-contextMenu-master\test\integration\disabled.js" />
+    <Content Include="ContextMenu\jQuery-contextMenu-master\test\integration\dynamic-create.js" />
+    <Content Include="ContextMenu\jQuery-contextMenu-master\test\integration\dynamic.js" />
+    <Content Include="ContextMenu\jQuery-contextMenu-master\test\integration\html\accesskeys.html" />
+    <Content Include="ContextMenu\jQuery-contextMenu-master\test\integration\html\accesskeys_test.html" />
+    <Content Include="ContextMenu\jQuery-contextMenu-master\test\integration\html\async-create.html" />
+    <Content Include="ContextMenu\jQuery-contextMenu-master\test\integration\html\callback.html" />
+    <Content Include="ContextMenu\jQuery-contextMenu-master\test\integration\html\callback_test.html" />
+    <Content Include="ContextMenu\jQuery-contextMenu-master\test\integration\html\custom-command.html" />
+    <Content Include="ContextMenu\jQuery-contextMenu-master\test\integration\html\custom-command_test.html" />
+    <Content Include="ContextMenu\jQuery-contextMenu-master\test\integration\html\disabled-callback.html" />
+    <Content Include="ContextMenu\jQuery-contextMenu-master\test\integration\html\disabled-callback_test.html" />
+    <Content Include="ContextMenu\jQuery-contextMenu-master\test\integration\html\disabled-changing.html" />
+    <Content Include="ContextMenu\jQuery-contextMenu-master\test\integration\html\disabled-changing_test.html" />
+    <Content Include="ContextMenu\jQuery-contextMenu-master\test\integration\html\disabled-menu.html" />
+    <Content Include="ContextMenu\jQuery-contextMenu-master\test\integration\html\disabled.html" />
+    <Content Include="ContextMenu\jQuery-contextMenu-master\test\integration\html\disabled_test.html" />
+    <Content Include="ContextMenu\jQuery-contextMenu-master\test\integration\html\dynamic-create.html" />
+    <Content Include="ContextMenu\jQuery-contextMenu-master\test\integration\html\dynamic.html" />
+    <Content Include="ContextMenu\jQuery-contextMenu-master\test\integration\html\html5-import.html" />
+    <Content Include="ContextMenu\jQuery-contextMenu-master\test\integration\html\html5-polyfill-firefox8.html" />
+    <Content Include="ContextMenu\jQuery-contextMenu-master\test\integration\html\html5-polyfill.html" />
+    <Content Include="ContextMenu\jQuery-contextMenu-master\test\integration\html\input.html" />
+    <Content Include="ContextMenu\jQuery-contextMenu-master\test\integration\html\keeping-contextmenu-open.html" />
+    <Content Include="ContextMenu\jQuery-contextMenu-master\test\integration\html\menu-title.html" />
+    <Content Include="ContextMenu\jQuery-contextMenu-master\test\integration\html\on-dom-element.html" />
+    <Content Include="ContextMenu\jQuery-contextMenu-master\test\integration\html\sub-menus.html" />
+    <Content Include="ContextMenu\jQuery-contextMenu-master\test\integration\html\sub-menus_test.html" />
+    <Content Include="ContextMenu\jQuery-contextMenu-master\test\integration\html\trigger-custom.html" />
+    <Content Include="ContextMenu\jQuery-contextMenu-master\test\integration\html\trigger-hover-autohide.html" />
+    <Content Include="ContextMenu\jQuery-contextMenu-master\test\integration\html\trigger-hover.html" />
+    <Content Include="ContextMenu\jQuery-contextMenu-master\test\integration\html\trigger-left-click.html" />
+    <Content Include="ContextMenu\jQuery-contextMenu-master\test\integration\html\trigger-swipe.html" />
+    <Content Include="ContextMenu\jQuery-contextMenu-master\test\integration\input.js" />
+    <Content Include="ContextMenu\jQuery-contextMenu-master\test\integration\keeping-contextmenu-open.js" />
+    <Content Include="ContextMenu\jQuery-contextMenu-master\test\integration\on-dom-element.js" />
+    <Content Include="ContextMenu\jQuery-contextMenu-master\test\integration\trigger-custom.js" />
+    <Content Include="ContextMenu\jQuery-contextMenu-master\test\integration\trigger-left-click.js" />
+    <Content Include="ContextMenu\jQuery-contextMenu-master\test\integration\trigger-right-click.js" />
+    <Content Include="ContextMenu\jQuery-contextMenu-master\test\specs\accesskeys.js" />
+    <Content Include="ContextMenu\jQuery-contextMenu-master\test\specs\aync-create.js" />
+    <Content Include="ContextMenu\jQuery-contextMenu-master\test\specs\callback.js" />
+    <Content Include="ContextMenu\jQuery-contextMenu-master\test\specs\submenu.js" />
+    <Content Include="ContextMenu\jQuery-contextMenu-master\test\unit\test-events.js" />
+    <Content Include="ContextMenu\jQuery-contextMenu-master\wdio.conf.js" />
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="GallaryScripts\fancyapps-fancyBox-c00852a\demo\1_b.jpg" />
+    <Content Include="GallaryScripts\fancyapps-fancyBox-c00852a\demo\1_s.jpg" />
+    <Content Include="GallaryScripts\fancyapps-fancyBox-c00852a\demo\2_b.jpg" />
+    <Content Include="GallaryScripts\fancyapps-fancyBox-c00852a\demo\2_s.jpg" />
+    <Content Include="GallaryScripts\fancyapps-fancyBox-c00852a\demo\3_b.jpg" />
+    <Content Include="GallaryScripts\fancyapps-fancyBox-c00852a\demo\3_s.jpg" />
+    <Content Include="GallaryScripts\fancyapps-fancyBox-c00852a\demo\4_b.jpg" />
+    <Content Include="GallaryScripts\fancyapps-fancyBox-c00852a\demo\4_s.jpg" />
+    <Content Include="GallaryScripts\fancyapps-fancyBox-c00852a\demo\5_b.jpg" />
+    <Content Include="GallaryScripts\fancyapps-fancyBox-c00852a\demo\5_s.jpg" />
+    <Content Include="GallaryScripts\fancyapps-fancyBox-c00852a\demo\ajax.txt" />
+    <Content Include="GallaryScripts\fancyapps-fancyBox-c00852a\demo\iframe.html" />
+    <Content Include="GallaryScripts\fancyapps-fancyBox-c00852a\demo\index.html" />
+    <Content Include="GallaryScripts\fancyapps-fancyBox-c00852a\gulpfile.js" />
+    <Content Include="GallaryScripts\fancyapps-fancyBox-c00852a\lib\jquery-1.10.2.min.js" />
+    <Content Include="GallaryScripts\fancyapps-fancyBox-c00852a\lib\jquery.mousewheel.pack.js" />
+    <Content Include="GallaryScripts\fancyapps-fancyBox-c00852a\source\blank.gif" />
+    <Content Include="GallaryScripts\fancyapps-fancyBox-c00852a\source\fancybox_loading%402x.gif" />
+    <Content Include="GallaryScripts\fancyapps-fancyBox-c00852a\source\fancybox_loading.gif" />
+    <Content Include="GallaryScripts\fancyapps-fancyBox-c00852a\source\fancybox_overlay.png" />
+    <Content Include="GallaryScripts\fancyapps-fancyBox-c00852a\source\fancybox_sprite%402x.png" />
+    <Content Include="GallaryScripts\fancyapps-fancyBox-c00852a\source\fancybox_sprite.png" />
+    <Content Include="GallaryScripts\fancyapps-fancyBox-c00852a\source\helpers\fancybox_buttons.png" />
+    <Content Include="GallaryScripts\fancyapps-fancyBox-c00852a\source\helpers\jquery.fancybox-buttons.css" />
+    <Content Include="GallaryScripts\fancyapps-fancyBox-c00852a\source\helpers\jquery.fancybox-buttons.js" />
+    <Content Include="GallaryScripts\fancyapps-fancyBox-c00852a\source\helpers\jquery.fancybox-media.js" />
+    <Content Include="GallaryScripts\fancyapps-fancyBox-c00852a\source\helpers\jquery.fancybox-thumbs.css" />
+    <Content Include="GallaryScripts\fancyapps-fancyBox-c00852a\source\helpers\jquery.fancybox-thumbs.js" />
+    <Content Include="GallaryScripts\fancyapps-fancyBox-c00852a\source\jquery.fancybox.css" />
+    <Content Include="GallaryScripts\fancyapps-fancyBox-c00852a\source\jquery.fancybox.js" />
+    <Content Include="GallaryScripts\fancyapps-fancyBox-c00852a\source\jquery.fancybox.pack.js" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Scripts\angular-mocks.js" />
+    <Content Include="Scripts\angular-route.js" />
+    <Content Include="Scripts\angular-route.min.js" />
+    <Content Include="Scripts\angular.js" />
+    <Content Include="Scripts\angular.min.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="ApplicationInsights.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ContextMenu\jQuery-contextMenu-master\.editorconfig" />
+    <Content Include="ContextMenu\jQuery-contextMenu-master\.gitignore" />
+    <Content Include="ContextMenu\jQuery-contextMenu-master\.jscsrc" />
+    <Content Include="ContextMenu\jQuery-contextMenu-master\.sauce.yml" />
+    <Content Include="ContextMenu\jQuery-contextMenu-master\.travis.yml" />
+    <Content Include="ContextMenu\jQuery-contextMenu-master\bower.json" />
+    <Content Include="ContextMenu\jQuery-contextMenu-master\CHANGELOG.md" />
+    <Content Include="ContextMenu\jQuery-contextMenu-master\contextMenu.jquery.json" />
+    <Content Include="ContextMenu\jQuery-contextMenu-master\dist\font\context-menu-icons.eot" />
+    <Content Include="ContextMenu\jQuery-contextMenu-master\dist\font\context-menu-icons.ttf" />
+    <Content Include="ContextMenu\jQuery-contextMenu-master\dist\font\context-menu-icons.woff" />
+    <Content Include="ContextMenu\jQuery-contextMenu-master\dist\font\context-menu-icons.woff2" />
+    <Content Include="ContextMenu\jQuery-contextMenu-master\dist\jquery.contextMenu.min.css.map" />
+    <Content Include="ContextMenu\jQuery-contextMenu-master\dist\jquery.contextMenu.min.js.map" />
+    <Content Include="ContextMenu\jQuery-contextMenu-master\documentation\CONTRIBUTE.md" />
+    <Content Include="ContextMenu\jQuery-contextMenu-master\documentation\couscous.yml" />
+    <Content Include="ContextMenu\jQuery-contextMenu-master\documentation\demo.md" />
+    <Content Include="ContextMenu\jQuery-contextMenu-master\documentation\demo\accesskeys.md" />
+    <Content Include="ContextMenu\jQuery-contextMenu-master\documentation\demo\accesskeys_test.md" />
+    <Content Include="ContextMenu\jQuery-contextMenu-master\documentation\demo\async-create.md" />
+    <Content Include="ContextMenu\jQuery-contextMenu-master\documentation\demo\async-promise.md" />
+    <Content Include="ContextMenu\jQuery-contextMenu-master\documentation\demo\callback.md" />
+    <Content Include="ContextMenu\jQuery-contextMenu-master\documentation\demo\callback_test.md" />
+    <Content Include="ContextMenu\jQuery-contextMenu-master\documentation\demo\custom-command.md" />
+    <Content Include="ContextMenu\jQuery-contextMenu-master\documentation\demo\custom-command_test.md" />
+    <Content Include="ContextMenu\jQuery-contextMenu-master\documentation\demo\disabled-callback.md" />
+    <Content Include="ContextMenu\jQuery-contextMenu-master\documentation\demo\disabled-callback_test.md" />
+    <Content Include="ContextMenu\jQuery-contextMenu-master\documentation\demo\disabled-changing.md" />
+    <Content Include="ContextMenu\jQuery-contextMenu-master\documentation\demo\disabled-changing_test.md" />
+    <Content Include="ContextMenu\jQuery-contextMenu-master\documentation\demo\disabled-menu.md" />
+    <Content Include="ContextMenu\jQuery-contextMenu-master\documentation\demo\disabled.md" />
+    <Content Include="ContextMenu\jQuery-contextMenu-master\documentation\demo\disabled_test.md" />
+    <Content Include="ContextMenu\jQuery-contextMenu-master\documentation\demo\dynamic-create.md" />
+    <Content Include="ContextMenu\jQuery-contextMenu-master\documentation\demo\dynamic.md" />
+    <Content Include="ContextMenu\jQuery-contextMenu-master\documentation\demo\fontawesome-icons.md" />
+    <Content Include="ContextMenu\jQuery-contextMenu-master\documentation\demo\html5-import.md" />
+    <Content Include="ContextMenu\jQuery-contextMenu-master\documentation\demo\html5-polyfill-firefox8.md" />
+    <Content Include="ContextMenu\jQuery-contextMenu-master\documentation\demo\html5-polyfill.md" />
+    <Content Include="ContextMenu\jQuery-contextMenu-master\documentation\demo\input.md" />
+    <Content Include="ContextMenu\jQuery-contextMenu-master\documentation\demo\keeping-contextmenu-open.md" />
+    <Content Include="ContextMenu\jQuery-contextMenu-master\documentation\demo\menu-title.md" />
+    <Content Include="ContextMenu\jQuery-contextMenu-master\documentation\demo\on-dom-element.md" />
+    <Content Include="ContextMenu\jQuery-contextMenu-master\documentation\demo\sub-menus-promise.md" />
+    <Content Include="ContextMenu\jQuery-contextMenu-master\documentation\demo\sub-menus.md" />
+    <Content Include="ContextMenu\jQuery-contextMenu-master\documentation\demo\sub-menus_test.md" />
+    <Content Include="ContextMenu\jQuery-contextMenu-master\documentation\demo\trigger-custom.md" />
+    <Content Include="ContextMenu\jQuery-contextMenu-master\documentation\demo\trigger-hover-autohide.md" />
+    <Content Include="ContextMenu\jQuery-contextMenu-master\documentation\demo\trigger-hover.md" />
+    <Content Include="ContextMenu\jQuery-contextMenu-master\documentation\demo\trigger-left-click.md" />
+    <Content Include="ContextMenu\jQuery-contextMenu-master\documentation\demo\trigger-swipe.md" />
+    <Content Include="ContextMenu\jQuery-contextMenu-master\documentation\docs.md" />
+    <Content Include="ContextMenu\jQuery-contextMenu-master\documentation\docs\custom-command-types.md" />
+    <Content Include="ContextMenu\jQuery-contextMenu-master\documentation\docs\customize.md" />
+    <Content Include="ContextMenu\jQuery-contextMenu-master\documentation\docs\events.md" />
+    <Content Include="ContextMenu\jQuery-contextMenu-master\documentation\docs\font-awesome.md" />
+    <Content Include="ContextMenu\jQuery-contextMenu-master\documentation\docs\html5-polyfill.md" />
+    <Content Include="ContextMenu\jQuery-contextMenu-master\documentation\docs\input-helpers.md" />
+    <Content Include="ContextMenu\jQuery-contextMenu-master\documentation\docs\items.md" />
+    <Content Include="ContextMenu\jQuery-contextMenu-master\documentation\docs\plugin-commands.md" />
+    <Content Include="ContextMenu\jQuery-contextMenu-master\documentation\docs\runtime-options.md" />
+    <Content Include="ContextMenu\jQuery-contextMenu-master\documentation\index.md" />
+    <Content Include="ContextMenu\jQuery-contextMenu-master\documentation\website\.gitignore" />
+    <Content Include="ContextMenu\jQuery-contextMenu-master\documentation\website\couscous.yml" />
+    <Content Include="ContextMenu\jQuery-contextMenu-master\documentation\website\default.twig" />
+    <Content Include="ContextMenu\jQuery-contextMenu-master\documentation\website\fonts\2C6A5F_0_0.eot" />
+    <Content Include="ContextMenu\jQuery-contextMenu-master\documentation\website\fonts\2C6A5F_0_0.ttf" />
+    <Content Include="ContextMenu\jQuery-contextMenu-master\documentation\website\fonts\2C6A5F_0_0.woff" />
+    <Content Include="ContextMenu\jQuery-contextMenu-master\documentation\website\fonts\2C6A5F_0_0.woff2" />
+    <Content Include="ContextMenu\jQuery-contextMenu-master\documentation\website\fonts\2C6A5F_1_0.eot" />
+    <Content Include="ContextMenu\jQuery-contextMenu-master\documentation\website\fonts\2C6A5F_1_0.ttf" />
+    <Content Include="ContextMenu\jQuery-contextMenu-master\documentation\website\fonts\2C6A5F_1_0.woff" />
+    <Content Include="ContextMenu\jQuery-contextMenu-master\documentation\website\fonts\2C6A5F_1_0.woff2" />
+    <Content Include="ContextMenu\jQuery-contextMenu-master\documentation\website\fonts\2D5240_0_0.eot" />
+    <Content Include="ContextMenu\jQuery-contextMenu-master\documentation\website\fonts\2D5240_0_0.ttf" />
+    <Content Include="ContextMenu\jQuery-contextMenu-master\documentation\website\fonts\2D5240_0_0.woff" />
+    <Content Include="ContextMenu\jQuery-contextMenu-master\documentation\website\fonts\2D5240_0_0.woff2" />
+    <Content Include="ContextMenu\jQuery-contextMenu-master\documentation\website\fonts\2D5240_1_0.eot" />
+    <Content Include="ContextMenu\jQuery-contextMenu-master\documentation\website\fonts\2D5240_1_0.ttf" />
+    <Content Include="ContextMenu\jQuery-contextMenu-master\documentation\website\fonts\2D5240_1_0.woff" />
+    <Content Include="ContextMenu\jQuery-contextMenu-master\documentation\website\fonts\2D5240_1_0.woff2" />
+    <Content Include="ContextMenu\jQuery-contextMenu-master\documentation\website\fonts\2D5240_2_0.eot" />
+    <Content Include="ContextMenu\jQuery-contextMenu-master\documentation\website\fonts\2D5240_2_0.ttf" />
+    <Content Include="ContextMenu\jQuery-contextMenu-master\documentation\website\fonts\2D5240_2_0.woff" />
+    <Content Include="ContextMenu\jQuery-contextMenu-master\documentation\website\fonts\2D5240_2_0.woff2" />
+    <Content Include="ContextMenu\jQuery-contextMenu-master\documentation\website\fonts\fontawesome-webfont.eot" />
+    <Content Include="ContextMenu\jQuery-contextMenu-master\documentation\website\fonts\fontawesome-webfont.ttf" />
+    <Content Include="ContextMenu\jQuery-contextMenu-master\documentation\website\fonts\fontawesome-webfont.woff" />
+    <Content Include="ContextMenu\jQuery-contextMenu-master\documentation\website\fonts\FontAwesome.otf" />
+    <Content Include="ContextMenu\jQuery-contextMenu-master\documentation\website\fonts\ProximaNova-Reg-webfont.eot" />
+    <Content Include="ContextMenu\jQuery-contextMenu-master\documentation\website\fonts\ProximaNova-Reg-webfont.ttf" />
+    <Content Include="ContextMenu\jQuery-contextMenu-master\documentation\website\fonts\ProximaNova-Reg-webfont.woff" />
+    <Content Include="ContextMenu\jQuery-contextMenu-master\documentation\website\fonts\ProximaNova-Sbold-webfont.eot" />
+    <Content Include="ContextMenu\jQuery-contextMenu-master\documentation\website\fonts\ProximaNova-Sbold-webfont.ttf" />
+    <Content Include="ContextMenu\jQuery-contextMenu-master\documentation\website\fonts\ProximaNova-Sbold-webfont.woff" />
+    <Content Include="ContextMenu\jQuery-contextMenu-master\documentation\website\LICENSE" />
+    <Content Include="ContextMenu\jQuery-contextMenu-master\documentation\website\original-theme\bower.json" />
+    <Content Include="ContextMenu\jQuery-contextMenu-master\documentation\website\original-theme\sass\badge_only.sass" />
+    <Content Include="ContextMenu\jQuery-contextMenu-master\documentation\website\original-theme\sass\theme.sass" />
+    <Content Include="ContextMenu\jQuery-contextMenu-master\documentation\website\original-theme\sass\_theme_badge.sass" />
+    <Content Include="ContextMenu\jQuery-contextMenu-master\documentation\website\original-theme\sass\_theme_badge_fa.sass" />
+    <Content Include="ContextMenu\jQuery-contextMenu-master\documentation\website\original-theme\sass\_theme_breadcrumbs.sass" />
+    <Content Include="ContextMenu\jQuery-contextMenu-master\documentation\website\original-theme\sass\_theme_font_awesome_compatibility.sass" />
+    <Content Include="ContextMenu\jQuery-contextMenu-master\documentation\website\original-theme\sass\_theme_layout.sass" />
+    <Content Include="ContextMenu\jQuery-contextMenu-master\documentation\website\original-theme\sass\_theme_mathjax.sass" />
+    <Content Include="ContextMenu\jQuery-contextMenu-master\documentation\website\original-theme\sass\_theme_rst.sass" />
+    <Content Include="ContextMenu\jQuery-contextMenu-master\documentation\website\original-theme\sass\_theme_variables.sass" />
+    <Content Include="ContextMenu\jQuery-contextMenu-master\documentation\website\README.md" />
+    <Content Include="ContextMenu\jQuery-contextMenu-master\LICENSE" />
+    <Content Include="ContextMenu\jQuery-contextMenu-master\package.json" />
+    <Content Include="ContextMenu\jQuery-contextMenu-master\README.md" />
+    <Content Include="ContextMenu\jQuery-contextMenu-master\src\.csscomb.json" />
+    <Content Include="ContextMenu\jQuery-contextMenu-master\src\.csslintrc" />
+    <Content Include="ContextMenu\jQuery-contextMenu-master\src\.jshintrc" />
+    <Content Include="ContextMenu\jQuery-contextMenu-master\src\sass\icons\_icon_classes.scss.tpl" />
+    <Content Include="ContextMenu\jQuery-contextMenu-master\src\sass\icons\_mixins.scss" />
+    <Content Include="ContextMenu\jQuery-contextMenu-master\src\sass\icons\_variables.scss" />
+    <Content Include="ContextMenu\jQuery-contextMenu-master\src\sass\icons\_variables.scss.tpl" />
+    <Content Include="ContextMenu\jQuery-contextMenu-master\src\sass\jquery.contextMenu.scss" />
+    <Content Include="ContextMenu\jQuery-contextMenu-master\src\sass\_icons.scss" />
+    <Content Include="ContextMenu\jQuery-contextMenu-master\src\sass\_variables.scss" />
+    <Content Include="GallaryScripts\fancyapps-fancyBox-c00852a\.gitattributes" />
+    <Content Include="GallaryScripts\fancyapps-fancyBox-c00852a\.gitignore" />
+    <Content Include="GallaryScripts\fancyapps-fancyBox-c00852a\bower.json" />
+    <Content Include="GallaryScripts\fancyapps-fancyBox-c00852a\CHANGELOG.md" />
+    <Content Include="GallaryScripts\fancyapps-fancyBox-c00852a\composer.json" />
+    <Content Include="GallaryScripts\fancyapps-fancyBox-c00852a\fancybox.jquery.json" />
+    <Content Include="GallaryScripts\fancyapps-fancyBox-c00852a\package.json" />
+    <Content Include="GallaryScripts\fancyapps-fancyBox-c00852a\README.md" />
+    <Content Include="GallaryScripts\fancyapps-fancyBox-c00852a\sprite.psd" />
+    <Content Include="Scripts\angular.min.js.map" />
+    <Content Include="Scripts\angular-route.min.js.map" />
+    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\jquery-1.10.2.js" />
+    <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\module.js" />
+    <Content Include="Scripts\respond.js" />
+    <Content Include="Scripts\respond.min.js" />
+    <Content Include="Scripts\_references.js" />
+    <Content Include="Views\Angular\gallery.html" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Angular\Index.cshtml" />
+    <Content Include="Views\Angular\MainPage.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="packages.config" />
+    <None Include="Project_Readme.html" />
+    <Content Include="Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BLL.Interfacies\BLL.Interface.csproj">
+      <Project>{7FA5F436-290D-46BF-AA16-33D0BFB5E45D}</Project>
+      <Name>BLL.Interface</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DependencyResolver\DependencyResolver.csproj">
+      <Project>{dfbef70e-859f-4567-9297-5168727f050d}</Project>
+      <Name>DependencyResolver</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>64180</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:64180/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

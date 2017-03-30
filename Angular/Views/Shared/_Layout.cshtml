@@ -1,0 +1,89 @@
+﻿<!DOCTYPE html>
+<html ng-app="photostore">
+<head>
+    <base href="/" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - PhotoStore</title>
+    @Styles.Render("~/Content/css")
+    <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <script src="~/Scripts/modernizr-2.6.2.js"></script>
+    <script src="~/Scripts/jquery.validate.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.js"></script>
+    <link rel="shortcut icon" href="../../Content/Images/unnamed.png" type="image/png">
+    <script src="~/Scripts/angular.min.js"></script>
+    <script src="~/Scripts/angular-route.min.js"></script>
+    <script src="~/Scripts/module.js"></script>
+</head>
+<body>
+    <div id="wrapper">
+        <nav class="navbar navbar-content " role="navigation">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="/Angular/Index">PhotoStore</a>
+                </div>
+
+                @*@if (Пользователь авторизаван)
+                    {
+                        using (Html.BeginForm("LogOff", "Home", FormMethod.Post, new { id = "logoutForm", @class = "navbar-right" }))
+                        {
+                           @Html.AntiForgeryToken()
+
+                           <ul class="nav navbar-nav navbar-right">
+                               @if (User.IsInRole("Administrator"))
+                               {
+                                   <li>@Html.ActionLink("Users edit", "GetAllUsers", "Home")</li>
+                               }
+                               <li>
+                                   @Html.ActionLink("Hello, " + User.Identity.Name + "!", "Index", "Home", routeValues: null, htmlAttributes: new { title = "Manage" })
+                               </li>
+                               <li><a href="javascript:document.getElementById('logoutForm').submit()">Log off</a></li>
+                           </ul>
+                        }
+                    }
+                    else
+                    {
+                       <ul class="nav navbar-nav navbar-right">
+                           <li><a href="/Home/Register"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                           <li><a href="/Home/Login"><span class="glyphicon glyphicon-log-in"></span> Log in</a></li>
+                       </ul>
+                    }*@
+                @using (Html.BeginForm("SearchResult", "UserAccount", FormMethod.Post, new { @class = "col-md-3" }))
+            {
+                    <form class="navbar-form navbar-left">
+
+
+                        <section class="webdesigntuts-workshop">
+                            <div class="row">
+                                <input type="search" name="searchString" placeholder="Search for..." required>
+                                <div class="input-group-btn">
+                                    <input type="submit" id="submit" value="Go">
+                                </div>
+                            </div>
+                        </section>
+
+
+                    </form>
+                }
+            </div>
+        </nav>
+        <ul class="nav navbar-nav">
+            <li class="active"><a href="/Angular/gallery">Gallery</a></li>
+        </ul>
+    </div>
+    <div class="container-fluid body-content">
+        @RenderBody()
+        @RenderSection("scripts", false)
+        <div class="wrapper">
+            <div class="content"></div>
+            <footer>
+                <hr />
+                <p>&copy; @DateTime.Now.Year -  PhotoStore</p>
+            </footer>
+        </div>
+    </div>
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+</body>
+</html>

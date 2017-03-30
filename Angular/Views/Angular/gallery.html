@@ -1,0 +1,17 @@
+﻿<div ng-controller="GalleryController">
+<style>
+    .group {
+  display: inline-block;
+}
+</style>
+
+   <div id="wrapper">
+            <div class="group" ng-repeat="img in photos">
+                    <span>{{img.Name}}</span>
+                    <img ng-src="{{img.Path}}" width="200" />
+                    <input type="button" value="del" ng-click="remove(img.Path)" />
+            </div>
+          </div>
+    </div>
+     
+       
